@@ -1,6 +1,7 @@
 import sentry_sdk
 
-from bottle import Bottle, run
+import os
+from bottle import route, run
 from sentry_sdk.integrations.bottle import BottleIntegration
 
 sentry_sdk.init(
@@ -8,20 +9,19 @@ sentry_sdk.init(
     integrations=[BottleIntegration()]
 )
 
-app = Bottle()
-
-@app.route('/')  
+@route('/')  
 def index():  
     return "Hello World!"
 
 
-@app.route('/success')  
+@route('/success')  
 def success():  
     return "Success!"
 
-@app.route('/fail')  
+@route('/fail')  
 def error():  
     raise RuntimeError("There is an my error!")  
     return  
-  
-run(host='0.0.0.0')
+
+port = os.environ.get('PORT', 5000)
+run(host='0.0.0.0', port=port)
