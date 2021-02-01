@@ -15,12 +15,11 @@ def index():
 
 @route('/success')  
 def success():  
-    return "OK"
+    return
 
 @route('/fail')  
 def error():  
-    raise RuntimeError("There is an my error!")  
-    return  
+    raise RuntimeError("There is an my error!")
 
 port = os.environ.get('PORT', 5000)
 run(host='0.0.0.0', port=port)
