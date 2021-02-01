@@ -1,5 +1,4 @@
 import sentry_sdk
-
 import os
 from bottle import route, run
 from sentry_sdk.integrations.bottle import BottleIntegration
