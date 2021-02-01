@@ -20,4 +20,4 @@ def error():
     return  
   
   
-app.run(host='practice-semochkin.herokuapp.com', port=8080)
+app.run(host='localhost', port=8080)
