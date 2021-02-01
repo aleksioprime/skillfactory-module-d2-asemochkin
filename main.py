@@ -10,9 +10,14 @@ sentry_sdk.init(
 
 app = Bottle()
 
-@app.route('/success')  
+@app.route('/')  
 def success():  
     return "Hello World!"
+
+
+@app.route('/success')  
+def success():  
+    return "Success!"
 
 @app.route('/fail')  
 def error():  
