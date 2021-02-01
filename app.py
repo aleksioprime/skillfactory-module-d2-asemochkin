@@ -15,7 +15,7 @@ def index():
 
 @route('/success')  
 def success():  
-    return "200 OK"
+    return "OK"
 
 @route('/fail')  
 def error():  
