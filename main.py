@@ -1,6 +1,5 @@
 import sentry_sdk
 
-import os
 from bottle import Bottle, run
 from sentry_sdk.integrations.bottle import BottleIntegration
 
@@ -24,7 +23,5 @@ def success():
 def error():  
     raise RuntimeError("There is an my error!")  
     return  
-
-port = os.environ.get('PORT', 5000)
   
-run(host='0.0.0.0', port=port)
+run(host='0.0.0.0', port=5000)
