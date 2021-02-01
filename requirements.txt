@@ -1,2 +1,3 @@
 requests
+bottle
 sentry_sdk
