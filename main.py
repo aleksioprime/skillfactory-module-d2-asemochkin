@@ -12,7 +12,7 @@ sentry_sdk.init(
 app = Bottle()
 
 @app.route('/')  
-def success():  
+def index():  
     return "Hello World!"
 
 
@@ -22,7 +22,7 @@ def success():
 
 @app.route('/fail')  
 def error():  
-    raise RuntimeError("There is an error!")  
+    raise RuntimeError("There is an my error!")  
     return  
 
 port = os.environ.get('PORT', 5000)
