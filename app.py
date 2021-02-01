@@ -3,10 +3,8 @@ import os
 from bottle import route, run
 from sentry_sdk.integrations.bottle import BottleIntegration
 
-sentry_sdk.init(
-    dsn="https://f7a65db35ea04b4fafb93135404a9465@o514688.ingest.sentry.io/5618301",
-    integrations=[BottleIntegration()]
-)
+sentry_sdk.init(dsn=os.environ.get("SENTRY_DSN"), integrations=[BottleIntegration()])
+
 # Обработчик для пути '/'
 @route('/')  
 def index():  
