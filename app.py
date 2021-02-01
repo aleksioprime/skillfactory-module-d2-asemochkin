@@ -10,16 +10,16 @@ sentry_sdk.init(
 
 @route('/')  
 def index():  
-    return "Hello World!"
+    return "Hello, peoples!"
 
 
 @route('/success')  
 def success():  
-    return
+    return "It is SUCCESS!"
 
 @route('/fail')  
 def error():  
-    raise RuntimeError("There is an my error!")
+    raise RuntimeError("There is my error!")
 
 port = os.environ.get('PORT', 5000)
 run(host='0.0.0.0', port=port)
