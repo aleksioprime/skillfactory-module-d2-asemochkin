@@ -11,12 +11,12 @@ sentry_sdk.init(
 
 @route('/')  
 def index():  
-    return "200 OK"
+    return "Hello World!"
 
 
 @route('/success')  
 def success():  
-    return "Success!"
+    return "200 OK"
 
 @route('/fail')  
 def error():  
